@@ -1,0 +1,22 @@
+.ShoppingListForm h1 {
+    font-size: 50px;
+    color: salmon;
+}
+
+.ShoppingListForm,
+.ShoppingListForm input {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.ShoppingListForm input {
+    margin: 2rem 0;
+}
+
+.ShoppingListForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5rem;
+}
