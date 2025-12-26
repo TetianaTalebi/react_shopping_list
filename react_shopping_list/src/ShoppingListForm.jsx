@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./ShoppingListForm.css";
 
-export default function ShoppingListForm() {
+export default function ShoppingListForm({addItem}) {
   const [formData, setFormData] = useState({ product: "", quantity: 0 });
 
   const handleFormChange = (event) => {
@@ -10,11 +10,14 @@ export default function ShoppingListForm() {
     });
   };
 
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    addItem(formData);
+    setFormData({product: "", quantity: 0});
+  };
+
   return (
-    <form className="ShoppingListForm">
-      <h1>
-        Product is {formData.product} and its quantity is {formData.quantity}
-      </h1>
+    <form className="ShoppingListForm" onSubmit={handleSubmit}>
       <label htmlFor="product">Product: </label>
       <input
         type="text"
