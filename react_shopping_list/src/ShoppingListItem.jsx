@@ -6,7 +6,7 @@ function ShoppingListItem({obj}){
     }
 
     return (
-        <li style={styles}>{obj.item} - {obj.quantity}</li>
+        <li style={styles}>{obj.product} - {obj.quantity}</li>
     );
 }
 
